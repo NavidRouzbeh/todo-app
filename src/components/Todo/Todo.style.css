@@ -1,0 +1,31 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 800px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: rgb(187, 187, 187);
+}
+
+.deleteButton{
+    height: 30px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background-color: #c80000;
+}
+
+.updateButton{
+    height: 30px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background-color: #00c83d;
+}
+
+.modifyButtons{
+    display: flex;
+    gap: 5px;
+}
