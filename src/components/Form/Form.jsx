@@ -37,7 +37,7 @@ const Form = ({mode,setMode,formValues,setFormValues}) => {
 
     return(
 
-        <Form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <Grid container alignItems="center" justifyContent="center">
                 <Grid item>
                     <TextField 
@@ -87,7 +87,7 @@ const Form = ({mode,setMode,formValues,setFormValues}) => {
                     ADD
                 </Button>
             </Grid>
-        </Form>
+        </form>
 
     )
 
