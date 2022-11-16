@@ -1,5 +1,5 @@
 import React  from "react";
-import { Button, FormControl, FormControlLabel, FormLabel, Grid , Radio, RadioGroup, TextField } from "@mui/material";
+import { FormGroup , Button, FormControl, FormControlLabel, FormLabel, Grid , Radio, RadioGroup, TextField } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { addTodo , updateTodo } from '../../Redux/Reducer/Todo.Slice'
 
@@ -33,11 +33,12 @@ const Form = ({mode,setMode,formValues,setFormValues}) => {
    const handleInputChange = (e) => {
         setFormValues({...formValues,[e.target.name]:e.target.value})
     };
-
+    console.log(formValues)
 
     return(
 
         <form onSubmit={handleSubmit}>
+            <FormGroup>
             <Grid container alignItems="center" justifyContent="center">
                 <Grid item>
                     <TextField 
@@ -87,6 +88,7 @@ const Form = ({mode,setMode,formValues,setFormValues}) => {
                     ADD
                 </Button>
             </Grid>
+            </FormGroup>
         </form>
 
     )

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Grid, Typography } from "@mui/material";
-import {doneTodo} from "../../Redux/Reducer/Todo.Slice"
+import TodoSlice, {doneTodo} from "../../Redux/Reducer/Todo.Slice"
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 
@@ -23,6 +23,9 @@ const Todo = ({todo,onClick,onClickUpdate}) => {
         </Typography>
         <Typography>
             {todo.desc}
+        </Typography>
+        <Typography>
+            {todo.priority}
         </Typography>
       </CardContent>
     </Card>

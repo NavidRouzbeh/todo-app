@@ -1,7 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = []
-
+const initialState =    [ 
+    {id:1 , title:'buy milk' , priority:"low" , desc:'1111', isDone:false},
+    {id:2 , title:'Read book' , desc:'2220', isDone:true}
+]
 export const TodoSlice=createSlice({
     name:'todos',
     initialState,
