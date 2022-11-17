@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import TodoCard from '../TodoCard/TodoCard';
 import { deleteTodo } from '../../Redux/Reducer/Todo.Slice';
-import { Grid } from '@mui/material';
+import { Grid , Box } from '@mui/material';
 
 const TodoList = ({setMode,setFormValues}) => {
 
@@ -18,8 +18,8 @@ const TodoList = ({setMode,setFormValues}) => {
     }
 
     return(
-
-        <Grid container>
+  
+        <Grid container alignContent={"center"} spacing={"2"} flexDirection="column">
             {todos.map((todo)=>(
                 <TodoCard  key={todo.id}
                 todo={todo}
@@ -28,6 +28,7 @@ const TodoList = ({setMode,setFormValues}) => {
                 />
             ))}
         </Grid>
+
 
     )
 

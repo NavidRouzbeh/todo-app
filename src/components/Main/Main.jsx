@@ -19,7 +19,7 @@ const Main = () => {
 
     return(
 
-        <Grid container>
+        <Grid container flexDirection={"column"} justifyContent={"center"}>
             <Form mode={mode} setMode={setMode} formValues={formValues} setFormValues={setFormValues} />
             <TodoList setMode={setMode} setFormValues={setFormValues}/>
         </Grid>

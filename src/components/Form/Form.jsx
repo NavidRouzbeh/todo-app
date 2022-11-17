@@ -12,7 +12,7 @@ const Form = ({mode,setMode,formValues,setFormValues}) => {
         e.preventDefault()
 
         if (mode === "create"){
-            dispatch(addTodo ({...formValues,id: Math.floor(Math.random()*100),isDone:false}))
+            dispatch(addTodo ({...formValues,id: Math.floor(Math.random()*1000),isDone:false}))
         }
 
         else{
@@ -20,7 +20,6 @@ const Form = ({mode,setMode,formValues,setFormValues}) => {
         }
 
         setFormValues({
-            id:Math.floor(Math.random()*1000),
             title:'',
             desc:'',
         })
@@ -85,7 +84,7 @@ const Form = ({mode,setMode,formValues,setFormValues}) => {
                     </FormControl>
                 </Grid>
                 <Button variant="contained" color="primary" type="submit">
-                    ADD
+                    {mode === "create"?'ADD':'UPDATE'}
                 </Button>
             </Grid>
             </FormGroup>

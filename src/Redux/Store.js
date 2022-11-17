@@ -4,24 +4,24 @@ import { persistReducer } from "redux-persist";
 import { combineReducers } from "@reduxjs/toolkit";
 import TodoSlice from "./Reducer/Todo.Slice";
 
-// const persistConfigue = {
-//     key:"root",
-//     version:1,
-//     storage
-// }
+const persistConfigue = {
+    key:"root",
+    version:1,
+    storage
+}
 
-// const reducer = combineReducers ({
-//     todos:TodoSlice
-// })
+const reducer = combineReducers ({
+    todos:TodoSlice
+})
 
-// const persistedReducer = persistReducer(persistConfigue,reducer)
-
-// export const store = configureStore({
-//     reducer:persistedReducer
-// })
+const persistedReducer = persistReducer(persistConfigue,reducer)
 
 export const store = configureStore({
-    reducer: {
-        todos:TodoSlice
-    }
-  })
+    reducer:persistedReducer
+})
+
+// export const store = configureStore({
+//     reducer: {
+//         todos:TodoSlice
+//     }
+//   })
