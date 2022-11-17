@@ -9,7 +9,7 @@ const Form = ({mode,setMode,formValues,setFormValues}) => {
     const dispatch=useDispatch()
 
     const handleSubmit = (e) => {
-        e.preventDedault()
+        e.preventDefault()
 
         if (mode === "create"){
             dispatch(addTodo ({...formValues,id: Math.floor(Math.random()*100),isDone:false}))
