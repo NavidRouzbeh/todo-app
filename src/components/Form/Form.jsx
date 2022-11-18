@@ -1,7 +1,8 @@
 import React  from "react";
 import { FormGroup , Button, FormControl, FormControlLabel, FormLabel, Grid , Radio, RadioGroup, TextField } from "@mui/material";
 import { useDispatch } from "react-redux";
-import { addTodo , updateTodo } from '../../Redux/Reducer/Todo.Slice'
+import { addTodo , updateTodo } from '../../Redux/Reducer/Todo.Slice';
+import AddIcon from '@mui/icons-material/Add';
 
 
 const Form = ({mode,setMode,formValues,setFormValues}) => {
@@ -38,7 +39,7 @@ const Form = ({mode,setMode,formValues,setFormValues}) => {
 
         <form onSubmit={handleSubmit}>
             <FormGroup>
-            <Grid container alignItems="center" justifyContent="center">
+            <Grid container flexDirection={"column"} alignItems="center" spacing={1.5} justifyContent="center">
                 <Grid item>
                     <TextField 
                     type="text"
@@ -83,7 +84,7 @@ const Form = ({mode,setMode,formValues,setFormValues}) => {
                         </RadioGroup>
                     </FormControl>
                 </Grid>
-                <Button variant="contained" color="primary" type="submit">
+                <Button variant="outlined" color="success" type="submit" endIcon={<AddIcon />}>
                     {mode === "create"?'ADD':'UPDATE'}
                 </Button>
             </Grid>

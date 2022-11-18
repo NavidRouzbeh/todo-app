@@ -9,11 +9,8 @@ const Todo = ({todo,onClick,onClickUpdate}) => {
     
 
     return(
-        <Card item sx={{ width: '20%' , m:1.5 }}>
+        <Card item sx={{ width: '25%' , m:1.5 }}>
         <CardContent>
-            <Typography>
-                {todo.id}
-            </Typography>
             <Typography>
                 {todo.title}
             </Typography>
@@ -23,9 +20,9 @@ const Todo = ({todo,onClick,onClickUpdate}) => {
             <Typography>
                 {todo.priority}
             </Typography>
-            <FormControlLabel control={<Checkbox defaultChecked />} label="DONE" />        
-            <Button onClick={onClick}>delete</Button>
-            <Button onClick={onClickUpdate}>update</Button>
+            <FormControlLabel control={<Checkbox />} label="DONE" />        
+            <Button variant="contained" color="error" onClick={onClick} sx={{mr:1.5}}>delete</Button>
+            <Button variant="contained" color="primary" onClick={onClickUpdate}>update</Button>
         </CardContent>
         </Card>
     )
